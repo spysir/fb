@@ -1,0 +1,13 @@
+version: "3"
+services:
+  filebrowser:
+    image: filebrowser/filebrowser:latest
+    container_name: filebrowser
+    restart: always
+    ports:
+      - 172.17.0.1:45574:80
+    volumes:
+      - /root/fb/srv:/srv
+      - /root/fb/database.db:/database.db
+      - /root:/vpsroot
+    
